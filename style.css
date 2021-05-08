@@ -5,6 +5,7 @@ a {
     font-family: Futura, Arial, sans-serif;
     text-decoration: none;
     color: white;
+    background-color: transparent;
 }
 
 a:link {
@@ -46,6 +47,10 @@ button {
     font-family: Futura, Arial, sans-serif;
 }
 
+li {
+    font-family: Futura, Arial, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     color: white;
@@ -53,6 +58,10 @@ button {
 }
 
 /* headline nav bar */
+.fixed-top {
+    background-color: transparent;
+}
+
 .headline {
     box-sizing: border-box;
     padding-top: 30px;
@@ -63,18 +72,39 @@ button {
     align-items: center;
 }
 
+.headline-home {
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.headline i {
+    color: white;
+    float: left;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
 .headline-left {
     float: left;
     font-size: 25px;
+    background-color: transparent;
 }
 
 .headline-right {
     float: right;
+    background-color: transparent;
 }
 
 .headline-right li {
     display: inline-block;
     padding: 0px 20px;
+    background-color: transparent;
 }
 
 .headline-right li a {
@@ -86,21 +116,53 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-@media screen and (max-width: 640px) {
+/* responsive at breakpoints */
+.intro-text {
+    font-size: 1.7em;
+}
+
+@media screen and (max-width: 1024px) {
     body .headline-left a {
         font-size: 18px;
     }
     body .headline-right a {
         font-size: 10px;
     }
+    .intro-text {
+        font-size: 1.0em;
+    }
+    .intro-text h4 {
+        font-size: 0.9em;
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
+    body .headline-left a {
+        font-size: 18px;
+    }
+    body .headline-right a {
+        font-size: 10px;
+    }
+    .intro-text {
+        font-size: 0.7em;
+    }
+    .intro-text h4 {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 425px) {
     .headline-left {
         font-size: 14px;
     }
     .headline-right {
         font-size: 5px;
+    }
+    .intro-text {
+        font-size: 0.5em;
+    }
+    .intro-text h4 {
+        font-size: 0.4em;
     }
 }
 
@@ -111,7 +173,7 @@ button {
     text-decoration: none;
 }
 
-.intro-text h3 {
+.intro-text p {
     font-weight: 400;
     text-align: left;
     margin: 0;
@@ -133,27 +195,38 @@ button {
     transform: translate(-50%, -50%)
 }
 
-.arrow-down {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 2px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+.intro-text .portfolio h4:hover {
+    color: pink;
+    transition: all 0.3s ease 0s;
+}
+
+.hidden {
+    display: none;
+}
+
+#bg-gif {
+    z-index: -1;
+    width: 100%;
+    height: 300%;
+}
+
+#bg-gif img {
+    filter: brightness(30%);
+    width: 100%;
+    object-fit: fill;
 }
 
 /* project gallery page */
 .row .col {
    padding-top: 95px;
-   padding-left: 80px;
-   padding-right: 30px;
+   padding-left: 85px;
+   padding-right: 35px;
    position: relative;
-   width: 90%; /* percentage? */
 }
 
 .image {
     display: block;
-    width: 100%;
+    width: 95%;
 }
 
 .overlay-content {
@@ -167,7 +240,7 @@ button {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -176,41 +249,40 @@ button {
     transition: opacity 0.25s;
 }
 
-/*.overlay-content > * {
-    transform: translateY(60px);
-    transition: transform 0.25s;
-}*/
-
 .overlay-content:hover {
     opacity: 1;
+    transition: all 0.3s ease 0s;
 }
 
-/*.overlay-content:hover > * {
-    transform: translateY(0);
-}*/
-
-/*.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 80%;
-    opacity: 0;
-    transition: .5s ease;
-    background: red;
+/* portfolio pieces pages */
+.top-img img {
+    margin-top: 100px;
+    margin-left: 25%;
+    width: 50%;
+    height: auto;
 }
 
-.overlay-content {
-    background-color: transparent;
-    position: relative;
-    text-align: center;
-    top: 10%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-}*/
+.row .col h4 {
+    text-align: right;
+
+}
+
+.row .col h4:hover {
+    color: pink;
+    transition: all 0.3s ease 0s;
+}
+
+.row .col p {
+    margin-right: 5%;
+}
+
+.col a {
+    color: white;
+}
+
+.col li {
+    margin-right: 5%;
+}
 
 /* about me page */
 .about img {
