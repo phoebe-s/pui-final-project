@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- home page -->
+<!-- about me page -->
 
 <head>
     <meta charset="UTF-8">
     <title>Phoebe Soong</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 
 <body>
-    <div class="headline" id="headline">
-            <div class="headline-left" id="headline-left">
-                <a href="index.html">Phoebe Soong</a>
-            </div>
-            <ul class="headline-right" id="headline-right">
-                <li><a href="work.html">Work</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="phoebesoongresume.pdf" target="_blank">Resume</a></li>
-            </ul>
+    <div class="headline" id="headline"><!-- fixed navigation bar -->
+        <div class="headline-left" id="headline-left">
+            <a href="index.html">Phoebe Soong</a>
+        </div>
+        <ul class="headline-right" id="headline-right">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="phoebesoongresume.pdf" target="_blank">Resume</a></li>
+        </ul>
     </div>
 
-    <div class="about" id="about">
-        <img src="me.jpeg" alt="photo of phoebe soong">
+    <div class="about" id="about"><!-- about me description & img -->
+        <img src="assets/images/me.jpeg" alt="photo of phoebe soong">
 
         <p>Hi there! I’m Phoebe from the Bay Area, California. I’m currently an undergraduate senior attending <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a> and am pursuing a B.S. in <a href="https://www.cmu.edu/dietrich/psychology/undergraduate/prospective-students/academics/cognitive-science/index.html">Cognitive Science</a>, with a concentration in Design and a minor in <a href="https://www.hcii.cmu.edu/">Human-Computer Interaction</a>. In my free time, I like to explore new music on Spotify and find new shows to watch on Netflix. Recently, I interned at <a href="https://usedatabrain.com/">DataBrain</a> as a UI/UX Designer. As a soon-to-be graduate in May 2021, I am looking for full-time positions for UI/UX design and research.<br><br>
         Feel free to contact me at <strong>psoong@andrew.cmu.edu</strong>!</p>
@@ -35,12 +35,12 @@
             <a href="https://phoebe-soong.medium.com/" class="fa fa-medium" target="_blank"></a>
         </div>
 
-        <!-- Button trigger modal -->
+        <!-- button trigger modal -->
         <button type="button" class="bl-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Contact
         </button>
 
-        <!-- Modal -->
+        <!-- modal content (form validation) -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -61,14 +61,10 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Submit</button>-->
               </div>
             </div>
           </div>
-        </div>
-        <!--<button type="contact" id="contact" target="_blank">Contact</button>-->
-
-        
+        </div>    
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
